@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<strong>New-Post Page.</strong>
+		<div id="inputArea">
+			<form action="/newPost" method="get" >				
+				<label for="like">Subject:</label>
+				<input type="text" id="subject" name="subject" placeholder="Enter subject" />
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" placeholder="Enter Message"></textarea>
+				<input id="send" value="Send" type="submit" />	
+			</form>				
+		</div>
+	
+		<br>
+		<div>
+			<a href= "/">HOME</a>
+		</div>
+		<div>
+			<a href= "/new">MAKE NEW POST</a>
+		</div>
+		<div>
+			<a href= "/show">SHOW POSTS</a>
+		</div>
+		
+	<script src="clientscript.js"></script>
+	</body>
+</html>

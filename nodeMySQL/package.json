@@ -1,0 +1,10 @@
+{
+  "name": "sql-challenge",
+  "version": "3.10.8",
+  "main":"server.js",
+  "scripts":{"start": "nodemon server.js"},
+   "dependencies" :
+  { "ejs" : ">=2.5.0"
+  }
+
+}

@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div >
+	
+		<strong>Show Posts Page</strong>
+		
+		<% for(var i=0; i<result.length;i++) { %>
+			<br>
+			<div> 
+				<strong><%= result[i].subject %>:</strong>  
+				<form action="/edit" method="get">
+					EDIT:<input id="rowNumber" name="rowNumber" value="<%= i %>" type="submit" /> 
+				</form> 
+				<form action="/delete" method="get">
+					DELETE:<input id="delete" name="subject" value="<%= result[i].subject %>" type="submit" /> 
+				</form> 
+				<%= result[i].postdate %><br>
+				Message Body:&nbsp&nbsp&nbsp
+				<%= result[i].message %><br>
+			</div>
+		<% } %>
+		<br>
+		<strong><%= status %></strong>
+		<br>
+		<div>
+			<a href= "/">HOME</a>
+		</div>
+		<div>
+			<a href= "/new">MAKE NEW POST</a>
+		</div>
+		<div>
+			<a href= "/show">SHOW POSTS</a>
+		</div>
+		</div>
+	<script src="clientscript.js"></script>
+	</body>
+</html>
